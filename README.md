@@ -14,3 +14,8 @@ This SSTC circuit was originate from @skoriweb and was later revision by @tefatr
  * 1uf MKP Cap x1
  * Ferrite Core 1x
  * 2 Servo wire 1.5m of lenght(m) x2
+# N-Mosfet spec
+Choose a common N-Channel Mosfet with low Rds(on state resistance) for better performance and low heat dissipation = low power loss.
+# Capacitor BUS
+Use capcitor with higher voltage rating than the supply circuit to the circuit.
+The more the capacitiance the more straight and longer the ARC gets(But no branch of ARC in the case of Continuous Wave operation).Unless it get interrupted by pulling down both gate with a N-channel mosfet to keep the gate of both N-Mosfet low, therefore the capacitors can charge up and deliver a huge current spike at once.
