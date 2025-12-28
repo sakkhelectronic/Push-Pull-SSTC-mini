@@ -16,6 +16,21 @@ This SSTC circuit was originate from @skoriweb and was later revision by @tefatr
  * 2 Servo wire 1.5m of lenght(m) x2
 # N-Mosfet spec
 Choose a common N-Channel Mosfet with low Rds(on state resistance) for better performance and low heat dissipation = low power loss.
+Example:
+
+<img width="446" height="511" alt="Screenshot 2025-12-28 163721" src="https://github.com/user-attachments/assets/ee1bb8f3-b307-4bda-b895-39142ab8c279" /> 
+  <img width="269" height="380" alt="Screenshot 2025-12-28 162313" src="https://github.com/user-attachments/assets/448bfc34-a5d7-443b-be5d-73ce58a23b21" />  
+  
+IRL540N
+  
+  <img width="727" height="69" alt="Screenshot 2025-12-28 163237" src="https://github.com/user-attachments/assets/2bb87ede-ecaf-4ab4-8a5e-521a932af5f3" />
+
+IRF540N
+
+<img width="722" height="19" alt="Screenshot 2025-12-28 163710" src="https://github.com/user-attachments/assets/6f750a5f-23fc-42cd-abac-673448ba1d6b" />
+
+in the example this a logic level N-channel mosfet which can be turned on fully with low on resistance from source to drain (Rds). Which make you can switch this N-Mosfet fully with just only 5V instead of traditional standard 12V to switch fully making it more effective for our circuit considering the feedback from the gdt (gate drive transformer) is typical very LOW Voltage and need tuning too.
+>Picture taken from www.irf.com AKA international rectifier
 # Capacitor BUS
 Use capacitor with higher voltage rating than the supply circuit to the circuit.The more the capacitiance the more straight and longer the ARC gets(But no branch of ARC in the case of Continuous Wave operation).Unless it get interrupted by pulling down both gate with a N-channel mosfet to keep the gate of both N-Mosfet low, therefore the capacitors can charge up and deliver a huge current spike at once.
 # Zener 12V Gate protection
